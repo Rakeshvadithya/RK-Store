@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style1.css">
+    <link rel="stylesheet" href="./script.js">
+</head>
+<body>
+    
+<!-- ── HEADER ── -->
+<header>
+  <a href="#" class="logo">RK<span>Store</span></a>
+
+  <div class="search-wrap">
+    <input type="text" placeholder="Search for products, brands and more…" id="searchInput"/>
+    <button><i class="fas fa-search"></i></button>
+  </div>
+
+  <nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#electronics">Electronics</a>
+    <a href="#fashion">Fashion</a>
+    <a href="#home-section">Home</a>
+    <a href="#beauty">Beauty</a>
+    <a href="#toys">Toys</a>
+    <a href="#" class="cart-btn">
+      <i class="fas fa-shopping-bag"></i> Cart
+      <span class="cart-count" id="cartCount">0</span>
+    </a>
+  </nav>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <div class="hero-badge">🔥 Summer Sale — Up to 60% Off</div>
+    <h1>Shop the<br/><em>Future</em><br/>Today.</h1>
+    <p>Discover premium electronics, fashion, home essentials and more — all at unbeatable prices, delivered to your door.</p>
+    <div class="hero-actions">
+      <a href="#electronics" class="btn-primary"><i class="fas fa-bolt"></i> Shop Now</a>
+      <a href="#deals" class="btn-outline"><i class="fas fa-tag"></i> Today's Deals</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">50K+</div>
+        <div class="stat-label">Products</div>
+      </div>
+      <div>
+        <div class="stat-num">2M+</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div>
+        <div class="stat-num">4.9★</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="floating-badge top-left">
+      <i class="fas fa-check-circle"></i> Free Delivery
+    </div>
+    <div class="hero-card-stack">
+      <div class="hero-product-card">
+        <img src="https://m.media-amazon.com/images/I/61bK6PMOC3L._SX679_.jpg" alt="iPhone"/>
+        <div class="hpc-info">
+          <div class="hpc-name">iPhone 14</div>
+          <div class="hpc-price">₹54,900</div>
+        </div>
+      </div>
+      <div class="hero-product-card">
+        <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/h/8/r/-original-imahh9yhrnaeb78u.jpeg?q=70" alt="MacBook"/>
+        <div class="hpc-info">
+          <div class="hpc-name">MacBook Neo</div>
+          <div class="hpc-price">₹70,999</div>
+        </div>
+      </div>
+      <div class="hero-product-card">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/a/h/j/-original-imahgnf4dp5tfjhm.jpeg?q=70" alt="Headphone"/>
+        <div class="hpc-info">
+          <div class="hpc-name">BoAt Rockerz</div>
+          <div class="hpc-price">₹1,699</div>
+        </div>
+      </div>
+    </div>
+    <div class="floating-badge bottom-right">
+      <i class="fas fa-star"></i> 4.9 Rated Store
+    </div>
+  </div>
+</section>
+
+<!-- ── CATEGORIES ── -->
+<section class="section">
+  <div class="section-header">
+    <h2 class="section-title">Shop by <span>Category</span></h2>
+    <a href="#" class="section-link">View all <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="categories-grid">
+    <a href="#electronics" class="cat-card">
+      <div class="cat-icon" style="background:rgba(0,123,255,0.12);color:#4d9eff;">📱</div>
+      <div class="cat-name">Electronics</div>
+      <div class="cat-count">248 items</div>
+    </a>
+    <a href="#fashion" class="cat-card">
+      <div class="cat-icon" style="background:rgba(255,77,109,0.12);color:#ff4d6d;">👕</div>
+      <div class="cat-name">Fashion</div>
+      <div class="cat-count">1,200 items</div>
+    </a>
+    <a href="#home-section" class="cat-card">
+      <div class="cat-icon" style="background:rgba(46,204,113,0.12);color:#2ecc71;">🏠</div>
+      <div class="cat-name">Home</div>
+      <div class="cat-count">560 items</div>
+    </a>
+    <a href="#beauty" class="cat-card">
+      <div class="cat-icon" style="background:rgba(245,200,66,0.12);color:#f5c842;">💄</div>
+      <div class="cat-name">Beauty</div>
+      <div class="cat-count">380 items</div>
+    </a>
+    <a href="#toys" class="cat-card">
+      <div class="cat-icon" style="background:rgba(155,89,182,0.12);color:#c39bd3;">🧸</div>
+      <div class="cat-name">Toys</div>
+      <div class="cat-count">190 items</div>
+    </a>
+    <a href="#shoes" class="cat-card">
+      <div class="cat-icon" style="background:rgba(255,152,0,0.12);color:#ff9800;">👟</div>
+      <div class="cat-name">Footwear</div>
+      <div class="cat-count">320 items</div>
+    </a>
+  </div>
+</section>
+
+<!-- ── DEALS OF THE DAY ── -->
+<section class="section deal-section" id="deals">
+  <div class="section-header">
+    <div>
+      <h2 class="section-title">Deals of the <span>Day</span></h2>
+      <div style="margin-top:12px;">
+        <div class="timer" id="timer">
+          <div class="timer-block"><div class="timer-num" id="hours">08</div><div class="timer-label">Hours</div></div>
+          <div class="timer-block"><div class="timer-num" id="mins">45</div><div class="timer-label">Mins</div></div>
+          <div class="timer-block"><div class="timer-num" id="secs">30</div><div class="timer-label">Secs</div></div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="section-link">All deals <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="products-grid">
+    <!-- iPhone 14 -->
+    <div class="prod-card">
+      <span class="prod-badge">61% OFF</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://m.media-amazon.com/images/I/61bK6PMOC3L._SX679_.jpg" alt="iPhone 14"/>
+      <div class="prod-info">
+        <div class="prod-brand">Apple</div>
+        <div class="prod-name">iPhone 14</div>
+        <div class="prod-desc">A15 Bionic Chip · 128GB · Super Retina XDR Display</div>
+        <div class="prod-stars">★★★★★ <span>(2.4K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹54,900</span>
+          <span class="prod-old">₹65,999</span>
+          <span class="prod-disc">17% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <!-- MacBook -->
+    <div class="prod-card">
+      <span class="prod-badge new">NEW</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/h/8/r/-original-imahh9yhrnaeb78u.jpeg?q=70" alt="MacBook"/>
+      <div class="prod-info">
+        <div class="prod-brand">Apple</div>
+        <div class="prod-name">MacBook Neo A18 Pro</div>
+        <div class="prod-desc">8GB RAM · 256GB SSD · macOS Tahoe</div>
+        <div class="prod-stars">★★★★★ <span>(890)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹70,999</span>
+          <span class="prod-old">₹79,999</span>
+          <span class="prod-disc">11% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <!-- BoAt -->
+    <div class="prod-card">
+      <span class="prod-badge hot">HOT</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://rukminim2.flixcart.com/image/612/612/xif0q/headphone/a/h/j/-original-imahgnf4dp5tfjhm.jpeg?q=70" alt="BoAt"/>
+      <div class="prod-info">
+        <div class="prod-brand">BoAt</div>
+        <div class="prod-name">Rockerz 480 Beast Mode</div>
+        <div class="prod-desc">60Hr Playback · RGB LEDs · ENx Tech</div>
+        <div class="prod-stars">★★★★☆ <span>(5.1K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹1,699</span>
+          <span class="prod-old">₹3,790</span>
+          <span class="prod-disc">55% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <!-- Samsung TV -->
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://rukminim1.flixcart.com/image/1536/1536/xif0q/television/k/x/6/-original-imahj8ydnwrzh4hd.jpeg?q=90" alt="Samsung TV"/>
+      <div class="prod-info">
+        <div class="prod-brand">Samsung</div>
+        <div class="prod-name">Smart LED TV 43"</div>
+        <div class="prod-desc">Full HD · Voice Assistant · HDR10+ · PurColor</div>
+        <div class="prod-stars">★★★★☆ <span>(3.2K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹25,750</span>
+          <span class="prod-old">₹27,500</span>
+          <span class="prod-disc">6% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROMO BANNER ── -->
+<div class="banner-strip">
+  <div class="banner-text">
+    <h2>Unlock Premium Access 🎉</h2>
+    <p>Get free shipping on every order + exclusive member deals all year round.</p>
+  </div>
+  <a href="#" class="btn-primary"><i class="fas fa-crown"></i> Join RK Prime</a>
+</div>
+
+<!-- ── ELECTRONICS ── -->
+<section class="section" id="electronics">
+  <div class="section-header">
+    <h2 class="section-title">⚡ Electronics</h2>
+    <a href="#" class="section-link">See more <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="products-grid">
+    <div class="prod-card">
+      <span class="prod-badge new">NEW</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/4/a/q/-original-imahh9yhgbb6rzrb.jpeg?q=70" alt="MacBook Neo"/>
+      <div class="prod-info">
+        <div class="prod-brand">Apple</div>
+        <div class="prod-name">MacBook Neo A18 Pro (2026)</div>
+        <div class="prod-desc">8GB · 256GB SSD · 13 inch display</div>
+        <div class="prod-stars">★★★★★ <span>(1.2K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹63,990</span>
+          <span class="prod-old">₹74,599</span>
+          <span class="prod-disc">14% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/i/l/c/-original-imahh84ydadhbsmq.jpeg?q=70" alt="MacBook Air M5"/>
+      <div class="prod-info">
+        <div class="prod-brand">Apple</div>
+        <div class="prod-name">MacBook Air M5</div>
+        <div class="prod-desc">16GB RAM · 512GB SSD · Midnight Color</div>
+        <div class="prod-stars">★★★★★ <span>(780)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹1,07,900</span>
+          <span class="prod-old">₹1,19,990</span>
+          <span class="prod-disc">10% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <span class="prod-badge">25% OFF</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://rukminim1.flixcart.com/image/1536/1536/xif0q/headphone/e/a/f/-original-imagtc44nk4b3hfg.jpeg?q=90" alt="AirPods Pro"/>
+      <div class="prod-info">
+        <div class="prod-brand">Apple</div>
+        <div class="prod-name">AirPods Pro 2</div>
+        <div class="prod-desc">Active Noise Cancellation · Spatial Audio</div>
+        <div class="prod-stars">★★★★★ <span>(4.5K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹17,990</span>
+          <span class="prod-old">₹23,900</span>
+          <span class="prod-disc">25% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://m.media-amazon.com/images/I/61bK6PMOC3L._SX679_.jpg" alt="iPhone 14"/>
+      <div class="prod-info">
+        <div class="prod-brand">Apple</div>
+        <div class="prod-name">iPhone 14</div>
+        <div class="prod-desc">A15 Bionic · 128GB · Super Retina XDR</div>
+        <div class="prod-stars">★★★★★ <span>(2.4K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹54,900</span>
+          <span class="prod-old">₹65,999</span>
+          <span class="prod-disc">17% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FASHION ── -->
+<section class="section" id="fashion" style="background:var(--surface);">
+  <div class="section-header">
+    <h2 class="section-title">👕 Top Brands Fashion</h2>
+    <a href="#" class="section-link">See more <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="products-grid">
+    <div class="prod-card">
+      <span class="prod-badge">47% OFF</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.snapmint.com/product_assets/images/001/166/900/large/open-uri20251127-3932625-1gi7qe2?1764237327" alt="Campus Sutra Shirt"/>
+      <div class="prod-info">
+        <div class="prod-brand">Campus Sutra</div>
+        <div class="prod-name">Men's Casual Shirt (Brown)</div>
+        <div class="prod-desc">Man-Made Fabric · Full Sleeves</div>
+        <div class="prod-stars">★★★★☆ <span>(2.1K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹999</span>
+          <span class="prod-old">₹1,899</span>
+          <span class="prod-disc">47% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.snapmint.com/product_assets/images/001/159/887/large/open-uri20251112-1006000-vv7osf?1762946388" alt="Bear House Shirt"/>
+      <div class="prod-info">
+        <div class="prod-brand">The Bear House</div>
+        <div class="prod-name">COMPARO Cotton Linen Slim Fit</div>
+        <div class="prod-desc">Cotton Linen · White · Full Sleeves</div>
+        <div class="prod-stars">★★★★★ <span>(890)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹1,746</span>
+          <span class="prod-old">₹2,495</span>
+          <span class="prod-disc">30% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <span class="prod-badge new">NEW</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://powerlook.in/cdn/shop/files/4_0a0cceee-2e30-43ac-85cf-30c1fd70c1ba.jpg?v=1775216346&width=355" alt="Embroidery Shirt"/>
+      <div class="prod-info">
+        <div class="prod-brand">Powerlook</div>
+        <div class="prod-name">Beige Floral Embroidery Shirt</div>
+        <div class="prod-desc">Premium embroidery design · Regular fit</div>
+        <div class="prod-stars">★★★★☆ <span>(340)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹1,746</span>
+          <span class="prod-old">₹2,495</span>
+          <span class="prod-disc">30% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <span class="prod-badge">56% OFF</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://m.media-amazon.com/images/I/61H1HxfTAUL._SY741_.jpg" alt="DEELMO Shirt"/>
+      <div class="prod-info">
+        <div class="prod-brand">DEELMO</div>
+        <div class="prod-name">Cotton Blend Casual Shirt</div>
+        <div class="prod-desc">Dual flap pockets · Breathable fabric</div>
+        <div class="prod-stars">★★★★☆ <span>(1.5K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹1,146</span>
+          <span class="prod-old">₹2,599</span>
+          <span class="prod-disc">56% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTWEAR ── -->
+<section class="section" id="shoes">
+  <div class="section-header">
+    <h2 class="section-title">👟 Trending Footwear</h2>
+    <a href="#" class="section-link">See more <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="products-grid">
+    <div class="prod-card">
+      <span class="prod-badge">47% OFF</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.snapmint.com/product_assets/images/000/804/811/large/open-uri20221007-718-w3on53?1665138176" alt="Liberty"/>
+      <div class="prod-info">
+        <div class="prod-brand">Liberty</div>
+        <div class="prod-name">Men's Sports Shoes (Black)</div>
+        <div class="prod-desc">Mesh Upper · EVA Sole · Lightweight</div>
+        <div class="prod-stars">★★★★☆ <span>(3.2K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹999</span>
+          <span class="prod-old">₹1,899</span>
+          <span class="prod-disc">47% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.snapmint.com/product_assets/images/000/996/364/large/open-uri20240909-31569-x45h8b?1725880524" alt="Bacca Bucci"/>
+      <div class="prod-info">
+        <div class="prod-brand">Bacca Bucci</div>
+        <div class="prod-name">Men's Casual Shoes (Tan)</div>
+        <div class="prod-desc">Polyurethane Upper · Premium Look</div>
+        <div class="prod-stars">★★★★★ <span>(1.8K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹1,199</span>
+          <span class="prod-old">₹2,499</span>
+          <span class="prod-disc">52% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.snapmint.com/product_assets/images/001/089/216/large/leaf.jpg?1749438384" alt="Asian"/>
+      <div class="prod-info">
+        <div class="prod-brand">Asian</div>
+        <div class="prod-name">Men's Casual Shoes (White)</div>
+        <div class="prod-desc">Synthetic Upper · Clean White Style</div>
+        <div class="prod-stars">★★★★☆ <span>(2.4K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹824</span>
+          <span class="prod-old">₹1,499</span>
+          <span class="prod-disc">45% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <span class="prod-badge hot">HOT</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.snapmint.com/product_assets/images/001/046/070/large/data?1735389828" alt="Sparx"/>
+      <div class="prod-info">
+        <div class="prod-brand">Sparx</div>
+        <div class="prod-name">Men's Sports Shoes (Black)</div>
+        <div class="prod-desc">Knitted Upper · TPR Sole</div>
+        <div class="prod-stars">★★★★☆ <span>(4.0K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹365</span>
+          <span class="prod-old">₹999</span>
+          <span class="prod-disc">63% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOME PRODUCTS ── -->
+<section class="section" id="home-section" style="background:var(--surface);">
+  <div class="section-header">
+    <h2 class="section-title">🏠 Home Essentials</h2>
+    <a href="#" class="section-link">See more <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="products-grid">
+    <div class="prod-card">
+      <span class="prod-badge">28% OFF</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=600&auto=format&fit=crop" alt="Sofa"/>
+      <div class="prod-info">
+        <div class="prod-brand">FurniCo</div>
+        <div class="prod-name">Modern 3 Seater Sofa</div>
+        <div class="prod-desc">Premium fabric · Comfortable · Living room essential</div>
+        <div class="prod-stars">★★★★☆ <span>(560)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹24,999</span>
+          <span class="prod-old">₹34,999</span>
+          <span class="prod-disc">29% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?q=80&w=600&auto=format&fit=crop" alt="Refrigerator"/>
+      <div class="prod-info">
+        <div class="prod-brand">CoolFresh</div>
+        <div class="prod-name">Double Door Refrigerator</div>
+        <div class="prod-desc">Energy Saving · Fast Cooling · 5 Star Rating</div>
+        <div class="prod-stars">★★★★★ <span>(1.1K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹18,490</span>
+          <span class="prod-old">₹24,999</span>
+          <span class="prod-disc">26% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?q=80&w=600&auto=format&fit=crop" alt="Washing Machine"/>
+      <div class="prod-info">
+        <div class="prod-brand">CleanMax</div>
+        <div class="prod-name">Fully Automatic Washing Machine</div>
+        <div class="prod-desc">Top Load · 7kg · Multiple wash programs</div>
+        <div class="prod-stars">★★★★☆ <span>(740)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹15,999</span>
+          <span class="prod-old">₹22,499</span>
+          <span class="prod-disc">29% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=600&auto=format&fit=crop" alt="Dining Table"/>
+      <div class="prod-info">
+        <div class="prod-brand">WoodCraft</div>
+        <div class="prod-name">Wooden 4 Seater Dining Table</div>
+        <div class="prod-desc">Solid Wood · Modern Design · Easy Assembly</div>
+        <div class="prod-stars">★★★★★ <span>(290)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹12,999</span>
+          <span class="prod-old">₹18,499</span>
+          <span class="prod-disc">30% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BEAUTY ── -->
+<section class="section" id="beauty">
+  <div class="section-header">
+    <h2 class="section-title">💄 Beauty & Personal Care</h2>
+    <a href="#" class="section-link">See more <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="products-grid">
+    <div class="prod-card">
+      <span class="prod-badge">40% OFF</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=600&auto=format&fit=crop" alt="Lipstick"/>
+      <div class="prod-info">
+        <div class="prod-brand">GlamUp</div>
+        <div class="prod-name">Matte Lipstick</div>
+        <div class="prod-desc">Long Lasting · Waterproof · Rich Pigment</div>
+        <div class="prod-stars">★★★★★ <span>(3.4K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹599</span>
+          <span class="prod-old">₹999</span>
+          <span class="prod-disc">40% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?q=80&w=600&auto=format&fit=crop" alt="Face Cream"/>
+      <div class="prod-info">
+        <div class="prod-brand">GlowSkin</div>
+        <div class="prod-name">Glow Face Cream</div>
+        <div class="prod-desc">Skin Brightening · SPF 30 · All Skin Types</div>
+        <div class="prod-stars">★★★★☆ <span>(1.8K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹899</span>
+          <span class="prod-old">₹1,499</span>
+          <span class="prod-disc">40% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <span class="prod-badge hot">HOT</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=600&auto=format&fit=crop" alt="Perfume"/>
+      <div class="prod-info">
+        <div class="prod-brand">LuxeScent</div>
+        <div class="prod-name">Luxury Perfume</div>
+        <div class="prod-desc">Long Lasting Fragrance · Unisex · 100ml</div>
+        <div class="prod-stars">★★★★★ <span>(920)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹1,299</span>
+          <span class="prod-old">₹2,299</span>
+          <span class="prod-disc">43% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=600&auto=format&fit=crop" alt="Makeup Kit"/>
+      <div class="prod-info">
+        <div class="prod-brand">BeautyPro</div>
+        <div class="prod-name">Professional Makeup Kit</div>
+        <div class="prod-desc">Complete Set · Premium Shades · Travel Friendly</div>
+        <div class="prod-stars">★★★★☆ <span>(2.2K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹2,499</span>
+          <span class="prod-old">₹3,999</span>
+          <span class="prod-disc">37% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TOYS ── -->
+<section class="section" id="toys" style="background:var(--surface);">
+  <div class="section-header">
+    <h2 class="section-title">🧸 Toy Collection</h2>
+    <a href="#" class="section-link">See more <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="products-grid">
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?q=80&w=600&auto=format&fit=crop" alt="Teddy"/>
+      <div class="prod-info">
+        <div class="prod-brand">SoftToys</div>
+        <div class="prod-name">Soft Teddy Bear</div>
+        <div class="prod-desc">Cute & Soft · Safe for Kids · Gift Ready</div>
+        <div class="prod-stars">★★★★★ <span>(4.8K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹799</span>
+          <span class="prod-old">₹1,299</span>
+          <span class="prod-disc">38% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <span class="prod-badge hot">HOT</span>
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.unsplash.com/photo-1517672651691-24622a91b550?q=80&w=600&auto=format&fit=crop" alt="Toy Car"/>
+      <div class="prod-info">
+        <div class="prod-brand">RaceKids</div>
+        <div class="prod-name">Remote Control Car</div>
+        <div class="prod-desc">Fast Racing · Long Battery Life · All Terrain</div>
+        <div class="prod-stars">★★★★☆ <span>(2.3K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹599</span>
+          <span class="prod-old">₹999</span>
+          <span class="prod-disc">40% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=600&auto=format&fit=crop" alt="Blocks"/>
+      <div class="prod-info">
+        <div class="prod-brand">EduPlay</div>
+        <div class="prod-name">Building Blocks Set</div>
+        <div class="prod-desc">Creative & Educational · 200 Pieces · Ages 3+</div>
+        <div class="prod-stars">★★★★★ <span>(1.6K)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹1,299</span>
+          <span class="prod-old">₹1,999</span>
+          <span class="prod-disc">35% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-wish" onclick="wishlist(this)"><i class="far fa-heart"></i></div>
+      <img class="prod-img" src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?q=80&w=600&auto=format&fit=crop" alt="Train"/>
+      <div class="prod-info">
+        <div class="prod-brand">TrainWorld</div>
+        <div class="prod-name">Electric Toy Train</div>
+        <div class="prod-desc">Battery Operated · Full Track Set · Lights & Sound</div>
+        <div class="prod-stars">★★★★☆ <span>(780)</span></div>
+        <div class="prod-prices">
+          <span class="prod-new">₹1,499</span>
+          <span class="prod-old">₹2,299</span>
+          <span class="prod-disc">35% off</span>
+        </div>
+        <button class="add-cart" onclick="addCart(this)"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BRANDS ── -->
+<div class="brands-bar">
+  <div class="brands-label">Trusted Brands We Carry</div>
+  <div class="brands-logos">
+    <div class="brand-logo">Apple</div>
+    <div class="brand-logo">Samsung</div>
+    <div class="brand-logo">BoAt</div>
+    <div class="brand-logo">Nike</div>
+    <div class="brand-logo">Realme</div>
+    <div class="brand-logo">Campus</div>
+    <div class="brand-logo">Liberty</div>
+    <div class="brand-logo">Sparx</div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">RK<span>Store</span></a>
+      <p>India's fastest growing online marketplace. Shop premium products across all categories with guaranteed authenticity and fast delivery.</p>
+      <div class="footer-socials">
+        <div class="social-icon"><i class="fab fa-instagram"></i></div>
+        <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
+        <div class="social-icon"><i class="fab fa-twitter"></i></div>
+        <div class="social-icon"><i class="fab fa-youtube"></i></div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>About</h5>
+      <a href="#">Contact Us</a>
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Press</a>
+      <a href="#">Stories</a>
+      <a href="#">Corporate Info</a>
+    </div>
+    <div class="footer-col">
+      <h5>Group Companies</h5>
+      <a href="#">Myntra</a>
+      <a href="#">Cleartrip</a>
+      <a href="#">Shopsy</a>
+    </div>
+    <div class="footer-col">
+      <h5>Help</h5>
+      <a href="#">Payment</a>
+      <a href="#">Shipping</a>
+      <a href="#">Cancellation</a>
+      <a href="#">Returns</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h5>Consumer Policy</h5>
+      <a href="#">Cancellation & Returns</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Security</a>
+      <a href="#">Privacy</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 RKStore. Made with ❤️ in India</div>
+    <div class="payment-icons">
+      <div class="pay-icon">UPI</div>
+      <div class="pay-icon">VISA</div>
+      <div class="pay-icon">MC</div>
+      <div class="pay-icon">EMI</div>
+      <div class="pay-icon">COD</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast">
+  <i class="fas fa-check-circle"></i>
+  <span id="toastMsg">Added to cart!</span>
+</div>
+
+</body>
+</html>
